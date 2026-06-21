@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品说明 · 华体会</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f7f4f0;
+      color: #2e2a27;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* hero 区 – 极简标识 */
+    .hero {
+      padding: 2.5rem 0 1.8rem;
+      border-bottom: 1px solid #d9d2cc;
+      margin-bottom: 2.2rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 350;
+      letter-spacing: 0.02em;
+      color: #3f3934;
+    }
+    .hero .sub {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      color: #6b615b;
+      max-width: 580px;
+    }
+
+    /* 卡片式区块 – 呼应米白/暖灰 */
+    .card {
+      background: #fefcf9;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 0 0 1px #eae4de;
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 450;
+      color: #4a423d;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #bfa38d;
+      padding-left: 0.9rem;
+    }
+    .card p {
+      margin-bottom: 1rem;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 引用 / 提示框风格 */
+    .callout {
+      background: #f2ede7;
+      border-left: 6px solid #b5a08f;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      font-size: 0.98rem;
+    }
+    .callout strong {
+      color: #4f3b2f;
+      font-weight: 600;
+    }
+
+    /* 特点 – 三列网格 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+    }
+    .feature-item {
+      background: #f9f5f0;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid #e7dfd7;
+    }
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4c3d34;
+      margin-bottom: 0.5rem;
+    }
+    .feature-item p {
+      font-size: 0.96rem;
+      color: #554b44;
+    }
+
+    .inline-link {
+      color: #8a6f5a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #cbb7a7;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .inline-link:hover {
+      color: #4d3829;
+      text-decoration-color: #4d3829;
+    }
+
+    .faq-block {
+      margin-bottom: 0.8rem;
+    }
+    .faq-block .q {
+      font-weight: 550;
+      color: #3b3530;
+      margin-bottom: 0.2rem;
+    }
+    .faq-block .a {
+      color: #4d453f;
+      padding-left: 0.6rem;
+      border-left: 2px solid #d9cec4;
+      margin-left: 0.3rem;
+      padding-top: 0.15rem;
+      padding-bottom: 0.15rem;
+    }
+
+    /* 响应式 */
+    @media (min-width: 640px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .hero h1 {
+        font-size: 3rem;
+      }
+      body {
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.3rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dbd2ca;
+      margin: 2rem 0 1.2rem;
+    }
+    .footer-note {
+      font-size: 0.9rem;
+      color: #7f7168;
+      text-align: center;
+      padding: 1rem 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>华体会 · 产品说明</h1>
+    <div class="sub">一份关于稳定入口与使用场景的整理，帮助您快速了解该服务的基本构成与特点。</div>
+  </div>
+
+  <!-- 摘要 -->
+  <div class="card">
+    <h2>摘要</h2>
+    <p><a href="https://web-home-hth.com.cn" class="inline-link">华体会</a> 是一个面向日常使用、注重页面效率与稳定访问的轻量服务。整个产品围绕「信息直达」与「低干扰体验」展开，不包含冗余跳转或额外负载页面。通过固定的结构入口，用户可以在大多数网络环境下获得一致的响应和清晰的页面层级。</p>
+    <p>本文档主要从产品功能、使用建议以及常见疑问三个角度进行说明，旨在为用户提供客观、真实的介绍，不涉及任何推广或诱导性表述。</p>
+  </div>
+
+  <!-- 亮点 / 特点 -->
+  <div class="card">
+    <h2>亮点与特点</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>稳定的入口结构</h3>
+        <p>首页采用扁平化路由，避免多层嵌套跳转。用户可以依靠唯一入口保持访问习惯，降低记忆成本。</p>
+      </div>
+      <div class="feature-item">
+        <h3>克制的页面权重</h3>
+        <p>不加载额外追踪脚本或大体积资源，在主流浏览器及移动端均可保持较快的首屏呈现速度。</p>
+      </div>
+      <div class="feature-item">
+        <h3>清晰的信息分区</h3>
+        <p>页面模块以内容优先，弱化装饰性元素。每一区块均承担独立的说明或引导作用，不重复堆叠。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 使用建议 + 提示框 -->
+  <div class="card">
+    <h2>使用建议</h2>
+    <p>如果您希望获得持续稳定的访问体验，建议将 <a href="https://web-home-hth.com.cn" class="inline-link">华体会</a> 添加至浏览器书签或收藏夹，避免每次手动输入或通过第三方搜索跳转。页面本身不设置强制缓存策略，但常规网络环境下刷新响应正常。</p>
+
+    <div class="callout">
+      <strong>📌 提示</strong> —— 部分网络环境（如企业内网、公共 Wi‑Fi）可能对域名解析存在限制，此时可尝试切换至移动网络或调整 DNS 设置。本页面不提供代理、镜像或其他变通方案，请用户根据自身网络条件自行评估。
+    </div>
+
+    <p>在移动设备上，页面布局会自动适配屏幕宽度；横竖屏切换后内容不会错位。如果您使用较老版本的浏览器（如 IE 11 以下），部分圆角与网格布局可能无法完整展示，建议升级至现代浏览器。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="card">
+    <h2>常见疑问摘要</h2>
+
+    <div class="faq-block">
+      <div class="q">▸ 是否需要注册或登录才能使用？</div>
+      <div class="a">不需要。首页本身为公开访问页面，不涉及用户认证环节。若后续产品有变动，会以页面公告为准。</div>
+    </div>
+    <div class="faq-block">
+      <div class="q">▸ 页面内容是否会频繁更新？</div>
+      <div class="a">目前保持稳定版本，更新频率较低。核心功能入口与信息结构在可预见的周期内不会发生重大调整。</div>
+    </div>
+    <div class="faq-block">
+      <div class="q">▸ 遇到显示异常应如何处理？</div>
+      <div class="a">建议先清空浏览器缓存或尝试无痕模式。如果问题持续，可检查网络连接是否正常。本说明页不设客服或反馈通道，请您谅解。</div>
+    </div>
+
+    <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #60544b;">以上摘要仅覆盖部分常见情况，更多细节可通过实际访问 <a href="https://web-home-hth.com.cn" class="inline-link">华体会</a> 自行了解。</p>
+  </div>
+
+  <!-- 可信但克制的访问说明 -->
+  <div class="card" style="background: #faf6f1;">
+    <h2>关于访问的说明</h2>
+    <p>本页面所指向的地址 <code>https://web-home-hth.com.cn</code> 为一个独立互联网资源。用户在访问前应自行确认其所在地区、网络服务商以及当地法律法规是否允许对该域名的正常访问。本文作者与发布者无法控制该服务器的运行状态、内容变更或安全策略。</p>
+    <p>所有描述均基于公开可查的产品表现，不构成任何形式的承诺或担保。请用户根据自身需求和判断决定是否使用该服务。</p>
+  </div>
+
+  <hr>
+  <div class="footer-note">
+    — 产品说明页 · 仅供信息参考 —
+  </div>
+
+</div>
+</body>
+</html>
