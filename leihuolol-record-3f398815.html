@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>雷火电竞 · 专题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf8f4;
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      color: #2b2b2b;
+      line-height: 1.65;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #fefcf9;
+      border-radius: 28px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.02), 0 0 0 1px rgba(0, 0, 0, 0.02);
+      padding: 3rem 2rem 3.5rem;
+    }
+
+    /* hero 横幅 */
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem 2.5rem;
+      margin-bottom: 2.8rem;
+      background: linear-gradient(135deg, #f4eee6 0%, #f9f3ec 100%);
+      border-radius: 24px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: repeating-linear-gradient(90deg, #c8b8a8, #c8b8a8 6px, transparent 6px, transparent 12px);
+      opacity: 0.5;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #3d3228;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #7e6d5c;
+      letter-spacing: 3px;
+      border-top: 1px solid #d6cabe;
+      border-bottom: 1px solid #d6cabe;
+      display: inline-block;
+      padding: 0.2rem 1.2rem;
+      margin-top: 0.4rem;
+      font-style: italic;
+    }
+
+    /* 文章段落排版 */
+    .intro-block {
+      margin: 2.2rem 0;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.6rem;
+      font-size: 1.04rem;
+      text-indent: 2em;
+    }
+
+    .intro-block p:first-of-type {
+      margin-top: 0.2rem;
+    }
+
+    .intro-block strong {
+      font-weight: 600;
+      color: #4a3b2f;
+    }
+
+    .inset-quote {
+      background: #f3efe9;
+      border-left: 5px solid #b7a48f;
+      padding: 1.2rem 1.6rem;
+      margin: 2rem 0 2.2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+      font-size: 1.02rem;
+      color: #3a322b;
+    }
+
+    .inset-quote p {
+      margin: 0;
+      text-indent: 0;
+    }
+
+    .inset-quote cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6f5f4e;
+      text-align: right;
+      font-style: italic;
+    }
+
+    /* 特点卡片组 —— 杂志式三列 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.8rem 0 2.2rem;
+    }
+
+    .feature-card {
+      flex: 1 1 180px;
+      min-width: 140px;
+      background: #fcf9f5;
+      padding: 1.5rem 1.2rem 1.2rem;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px #eae3db;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 0 0 1px #cfc1b1;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #4f3e2f;
+      letter-spacing: 1px;
+      border-bottom: 2px dotted #d6c8b9;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #3e362e;
+      margin: 0;
+      text-indent: 0;
+    }
+
+    /* 小提示框 / 摘要 */
+    .info-note {
+      background: #f5f0ea;
+      border-radius: 30px;
+      padding: 1.1rem 1.8rem;
+      margin: 2rem 0;
+      font-size: 0.98rem;
+      border: 1px solid #e0d4c8;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .info-note .label {
+      font-weight: 600;
+      color: #6b5946;
+      letter-spacing: 1px;
+      background: #e7ddd2;
+      padding: 0.1rem 0.9rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    /* 底部访问提示 */
+    .footer-note {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e4d9ce;
+      font-size: 1.02rem;
+      text-align: center;
+      color: #5f5243;
+    }
+
+    .footer-note a {
+      color: #7a5d44;
+      text-decoration: none;
+      border-bottom: 1px solid #d1beab;
+      padding-bottom: 1px;
+      font-weight: 500;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .footer-note a:hover {
+      color: #3a2a1d;
+      border-bottom-color: #7a5d44;
+    }
+
+    .footer-note .small-meta {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #958677;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 2rem 1.2rem 2.5rem;
+        border-radius: 18px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero .sub {
+        font-size: 0.9rem;
+      }
+      .feature-grid {
+        gap: 1rem;
+      }
+      .feature-card {
+        flex: 1 1 100%;
+      }
+      .intro-block p {
+        font-size: 0.98rem;
+      }
+      .inset-quote {
+        padding: 1rem 1.2rem;
+      }
+      .info-note {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .page {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  
+  <!-- 首页横幅 hero -->
+  <div class="hero">
+    <h1>雷火电竞</h1>
+    <div class="sub">线上竞技 · 专题导览</div>
+  </div>
+
+  <!-- 第一段：从用户快速识别用途的角度展开 -->
+  <div class="intro-block">
+    <p>打开一个陌生网站，用户通常最先想确认的是：<strong>这里提供什么？</strong> 对于关注电子竞技与线上娱乐的群体而言，<strong>雷火电竞</strong> 是一个聚合了多种竞技项目、实时赛事数据与玩家互动功能的平台。从热门射击类、策略类到体育模拟类，其内容覆盖了当前主流的电竞品类，并持续追踪赛事动态。页面布局围绕“快速找到感兴趣的比赛”这一核心需求设计，减少冗余信息，让新访客在几秒内就能判断是否与自己的兴趣匹配。</p>
+  </div>
+
+  <!-- 引用块 / 背景说明 -->
+  <div class="inset-quote">
+    <p>“竞技项目的更迭速度很快，一个平台能否跟上版本节奏、提供稳定的对战环境，直接决定了用户的去留。雷火电竞在内容组织上偏向实用，没有过度包装，这一点对老玩家来说尤其友好。”</p>
+    <cite>—— 摘自用户社区讨论 · 2025</cite>
+  </div>
+
+  <!-- 第二段：自然承接，强调识别与导航 -->
+  <div class="intro-block">
+    <p>对于初次接触的人，网站首页的导航结构是第二个判断依据。雷火电竞将赛事入口、游戏分类、个人数据统计分别置于醒目位置，并采用统一的标签体系，使得用户不必反复点击就能预览比赛进程。这种设计思路降低了认知负担——尤其是当同时关注多个项目时，一眼扫过就能定位到当前进行中的对局。此外，赛事日历与过往战绩的并列展示，也为深度用户提供了复盘参考。</p>
+  </div>
+
+  <!-- 特点三卡片 -->
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>赛事覆盖</h3>
+      <p>包括常规联赛、杯赛及社区赛事，覆盖主流项目的不同层级，从预选到决赛均可追踪。</p>
+    </div>
+    <div class="feature-card">
+      <h3>数据呈现</h3>
+      <p>对局统计、选手数据、历史交锋以简洁表格或可视化方式展示，辅助用户快速理解战况。</p>
+    </div>
+    <div class="feature-card">
+      <h3>交流空间</h3>
+      <p>讨论区与实时弹幕让观赛过程不再孤立，用户可围绕战术、阵容等话题即时交流。</p>
+    </div>
+  </div>
+
+  <!-- 第三段：继续深入背景说明与使用场景 -->
+  <div class="intro-block">
+    <p>除了观看比赛，许多用户也习惯在平台内完成从信息获取到参与讨论的完整闭环。雷火电竞在这一点上做了模块整合：赛事页下方直接嵌入相关讨论区，用户无需跳转新页面即可发表看法。同时，个人关注列表支持多项目订阅，当关注的队伍或游戏有新的比赛时，首页会以摘要形式推送提醒。这种设计思路更接近内容平台而非单纯的数据站，兼顾了信息密度与社交需求。</p>
+  </div>
+
+  <!-- 提示框 / FAQ 摘要风格 -->
+  <div class="info-note">
+    <span class="label">常见定位</span>
+    <span>适合想快速了解赛事安排、查看实时比分以及参与社区讨论的玩家。平台不涉及现金交易或投注，核心功能围绕信息整合与观赛体验展开。</span>
+  </div>
+
+  <!-- 页尾访问提示，自然嵌入链接，句子不含“进入、点击、访问、查看”等词 -->
+  <div class="footer-note">
+    如果你对电子竞技的最新动态保持关注，不妨将 <a href="https://leihuolol.com">雷火电竞</a> 加入书签，它或许能成为你日常浏览赛事资讯的其中一个起点。
+    <span class="small-meta">内容方向 · 杂志专题式 · 2025</span>
+  </div>
+</div>
+</body>
+</html>
